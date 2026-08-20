@@ -1,0 +1,22 @@
+{
+  "status": "in_progress",
+  "started_at": "2026-08-20T03:00:00Z",
+  "current_step": "parsing_and_aggregation",
+  "leagues_queue": [
+    "eng_premier",
+    "esp_laliga",
+    "ita_seriea",
+    "ger_bundesliga",
+    "fra_ligue1",
+    "por_primeira",
+    "ned_eredivisie",
+    "rus_rpl",
+    "tur_superlig",
+    "bra_brasileirao",
+    "arg_primera",
+    "usa_mls"
+  ],
+  "first_batch": ["eng_premier","esp_laliga","ita_seriea","ger_bundesliga"],
+  "estimated_first_commit": "24-48 hours",
+  "notes": "I'll push per-league CSV/JSON files and update data/real_db.json incrementally. Will attach sources and metadata for each league in commits."
+}
