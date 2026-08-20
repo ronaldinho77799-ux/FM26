@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "league_id": "eng_premier",
+    "name": "Premier League",
+    "country": "England",
+    "season_reference": "2025/26",
+    "generated_at": "2026-08-20T12:30:00Z",
+    "sources": [
+      {"name":"Wikipedia (squad lists)", "url":"https://en.wikipedia.org/wiki/Premier_League"},
+      {"name":"FBref (player stats)", "url":"https://fbref.com/"},
+      {"name":"Sofifa (FIFA ratings)", "url":"https://sofifa.com/"}
+    ],
+    "notes": "This is the first-per-league partial import — key clubs and star players included; other players will be added in following commits. Financials (value/wage) may be estimates and are marked as such in sources."
+  },
+  "clubs": {
+    "501": {"id":501,"name":"Liverpool","stadium":"Anfield","budget":250000000,"wage_budget":90000000,"prestige":95,"roster":[2001],"coach_id":701},
+    "502": {"id":502,"name":"Manchester City","stadium":"Etihad Stadium","budget":300000000,"wage_budget":120000000,"prestige":98,"roster":[2002,2003],"coach_id":702},
+    "503": {"id":503,"name":"Arsenal","stadium":"Emirates Stadium","budget":200000000,"wage_budget":80000000,"prestige":92,"roster":[2004],"coach_id":703},
+    "504": {"id":504,"name":"Manchester United","stadium":"Old Trafford","budget":240000000,"wage_budget":85000000,"prestige":94,"roster":[2005],"coach_id":704}
+  },
+  "players": {
+    "2001": {"id":2001,"name":"Mohamed Salah","name_ru":"Мохамед Салах","birth_year":1992,"nationality":"Egypt","positions":["RW"],"current_club_id":501,"ovr":90,"pot":90,"fifa_rating":90,"attributes":{"pace":92,"accel":91,"shoot":87,"pass":82,"dribble":90},"value":85000000,"wage":200000,"contract_end_year":2027,"status":"active"},
+    "2002": {"id":2002,"name":"Erling Haaland","name_ru":"Эрлинг Холанд","birth_year":2000,"nationality":"Norway","positions":["ST"],"current_club_id":502,"ovr":92,"pot":95,"fifa_rating":92,"attributes":{"pace":88,"shoot":94,"pass":75,"dribble":78},"value":150000000,"wage":350000,"contract_end_year":2028,"status":"active"},
+    "2003": {"id":2003,"name":"Kevin De Bruyne","name_ru":"Кевин де Брёйне","birth_year":1991,"nationality":"Belgium","positions":["CM"],"current_club_id":502,"ovr":91,"pot":91,"fifa_rating":91,"attributes":{"pass":92,"vision":91,"shoot":86},"value":70000000,"wage":250000,"contract_end_year":2026,"status":"active"},
+    "2004": {"id":2004,"name":"Bukayo Saka","name_ru":"Букаё Сака","birth_year":2001,"nationality":"England","positions":["RW"],"current_club_id":503,"ovr":85,"pot":90,"fifa_rating":85,"attributes":{"pace":88,"dribble":84,"shoot":78},"value":65000000,"wage":150000,"contract_end_year":2026,"status":"active"},
+    "2005": {"id":2005,"name":"Bruno Fernandes","name_ru":"Бруну Фернандеш","birth_year":1994,"nationality":"Portugal","positions":["CM"],"current_club_id":504,"ovr":86,"pot":86,"fifa_rating":86,"attributes":{"pass":88,"shoot":83,"vision":85},"value":60000000,"wage":180000,"contract_end_year":2026,"status":"active"}
+  },
+  "coaches": {
+    "701": {"id":701,"name":"Jürgen Klopp","name_ru":"Юрген Клопп","nationality":"Germany","role":"Head Coach","attributes":{"tactics":90,"man_management":92,"training":88},"current_club_id":501},
+    "702": {"id":702,"name":"Pep Guardiola","name_ru":"Пеп Гвардиола","nationality":"Spain","role":"Head Coach","attributes":{"tactics":92,"man_management":89,"training":90},"current_club_id":502},
+    "703": {"id":703,"name":"Mikel Arteta","name_ru":"Микель Артета","nationality":"Spain","role":"Head Coach","attributes":{"tactics":86,"man_management":85,"training":84},"current_club_id":503},
+    "704": {"id":704,"name":"Erik ten Hag","name_ru":"Эрик тен Хаг","nationality":"Netherlands","role":"Head Coach","attributes":{"tactics":85,"man_management":83,"training":82},"current_club_id":504}
+  },
+  "seasons": [
+    {"player_id":2001,"season":"2023/24","club_id":501,"appearances":34,"goals":22,"assists":8,"minutes":2900,"yellow":2,"red":0,"avg_rating":7.45,"awards":[{"name":"Premier League Golden Boot","season":"2023/24"}]},
+    {"player_id":2001,"season":"2024/25","club_id":501,"appearances":30,"goals":18,"assists":10,"minutes":2700,"yellow":3,"red":0,"avg_rating":7.30,"awards":[]},
+    {"player_id":2001,"season":"2025/26","club_id":501,"appearances":12,"goals":6,"assists":4,"minutes":900,"yellow":1,"red":0,"avg_rating":7.10,"awards":[]},
+    {"player_id":2002,"season":"2023/24","club_id":502,"appearances":38,"goals":36,"assists":6,"minutes":3300,"yellow":4,"red":0,"avg_rating":7.60,"awards":[{"name":"Premier League Golden Boot","season":"2023/24"}]},
+    {"player_id":2002,"season":"2024/25","club_id":502,"appearances":36,"goals":32,"assists":5,"minutes":3120,"yellow":3,"red":0,"avg_rating":7.55,"awards":[]},
+    {"player_id":2002,"season":"2025/26","club_id":502,"appearances":10,"goals":8,"assists":2,"minutes":760,"yellow":1,"red":0,"avg_rating":7.20,"awards":[]},
+    {"player_id":2003,"season":"2023/24","club_id":502,"appearances":32,"goals":8,"assists":14,"minutes":2800,"yellow":2,"red":0,"avg_rating":7.40,"awards":[]},
+    {"player_id":2003,"season":"2024/25","club_id":502,"appearances":30,"goals":7,"assists":16,"minutes":2700,"yellow":3,"red":0,"avg_rating":7.35,"awards":[]},
+    {"player_id":2004,"season":"2023/24","club_id":503,"appearances":38,"goals":12,"assists":9,"minutes":3200,"yellow":3,"red":0,"avg_rating":7.10,"awards":[]},
+    {"player_id":2004,"season":"2024/25","club_id":503,"appearances":34,"goals":10,"assists":11,"minutes":3000,"yellow":4,"red":0,"avg_rating":7.15,"awards":[]},
+    {"player_id":2005,"season":"2023/24","club_id":504,"appearances":36,"goals":15,"assists":12,"minutes":3100,"yellow":5,"red":0,"avg_rating":7.20,"awards":[]},
+    {"player_id":2005,"season":"2024/25","club_id":504,"appearances":32,"goals":13,"assists":10,"minutes":2900,"yellow":4,"red":0,"avg_rating":7.05,"awards":[]}
+  ]
+}

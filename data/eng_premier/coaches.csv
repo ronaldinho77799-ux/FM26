@@ -1,0 +1,5 @@
+id,name,name_ru,nationality,role,attributes,current_club_id
+701,Jürgen Klopp,Юрген Клопп,Germany,Head Coach,"{\"tactics\":90,\"man_management\":92,\"training\":88}",501
+702,Pep Guardiola,Пеп Гвардиола,Spain,Head Coach,"{\"tactics\":92,\"man_management\":89,\"training\":90}",502
+703,Mikel Arteta,Микель Артета,Spain,Head Coach,"{\"tactics\":86,\"man_management\":85,\"training\":84}",503
+704,Erik ten Hag,Эрик тен Хаг,Netherlands,Head Coach,"{\"tactics\":85,\"man_management\":83,\"training\":82}",504
