@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://scripts/UIManager.gd" type="Script" id=1]
+[ext_resource path="res://scripts/GameState.gd" type="Script" id=2]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBox" type="VBoxContainer" parent="."]
+margin_left = 200.0
+margin_top = 100.0
+margin_right = 780.0
+margin_bottom = 580.0
+separation = 12.0
+
+[node name="Title" type="Label" parent="VBox"]
+text = "Football Manager (MVP)"
+align = 1
+
+[node name="NewGame" type="Button" parent="VBox"]
+text = "Новая игра"
+connect("pressed", NodePath("."), "_on_NewGame_pressed")
+
+[node name="LoadGame" type="Button" parent="VBox"]
+text = "Загрузить игру"
+
+[node name="DBEditor" type="Button" parent="VBox"]
+text = "Редактор базы"
+connect("pressed", NodePath("."), "_on_DBEditor_pressed")
+
+[node name="Quit" type="Button" parent="VBox"]
+text = "Выход"
+connect("pressed", NodePath("."), "_on_Quit_pressed")
+
+[script]
+extends Control
+
+func _on_NewGame_pressed() -> void:
+	# старт карьеры с тестовым клуб (id=1 из шаблона)
+	GameState.start_career(1)
+	get_tree().change_scene_to_file("res://scenes/Office.tscn")
+
+func _on_DBEditor_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/DBEditor.tscn")
+
+func _on_Quit_pressed() -> void:
+	get_tree().quit()

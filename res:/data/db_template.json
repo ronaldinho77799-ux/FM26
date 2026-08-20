@@ -1,0 +1,109 @@
+{
+	"players": {
+		"1": {
+			"id": 1,
+			"name": "Иван Петров",
+			"birth_year": 2000,
+			"nationality": "Россия",
+			"positions": ["ST"],
+			"ovr": 62,
+			"pot": 70,
+			"attributes": {
+				"pace": 68,
+				"accel": 66,
+				"shoot": 64,
+				"pass": 50,
+				"dribble": 60,
+				"tech": 58,
+				"vision": 45,
+				"cross": 30,
+				"long_pass": 35,
+				"tackle": 25,
+				"interception": 20,
+				"strength": 65,
+				"stamina": 70,
+				"jump": 60,
+				"reaction": 62,
+				"gk_diving": 0,
+				"gk_handling": 0,
+				"gk_reflexes": 0
+			},
+			"value": 150000,
+			"wage": 2000,
+			"contract_end_year": 2027,
+			"club_id": 1,
+			"status": "active",
+			"history": []
+		},
+		"2": {
+			"id": 2,
+			"name": "Пётр Иванов",
+			"birth_year": 2003,
+			"nationality": "Россия",
+			"positions": ["CM"],
+			"ovr": 58,
+			"pot": 66,
+			"attributes": {
+				"pace": 60,
+				"accel": 57,
+				"shoot": 52,
+				"pass": 62,
+				"dribble": 56,
+				"tech": 55,
+				"vision": 60,
+				"cross": 48,
+				"long_pass": 50,
+				"tackle": 58,
+				"interception": 55,
+				"strength": 52,
+				"stamina": 68,
+				"jump": 48,
+				"reaction": 55,
+				"gk_diving": 0,
+				"gk_handling": 0,
+				"gk_reflexes": 0
+			},
+			"value": 90000,
+			"wage": 1200,
+			"contract_end_year": 2026,
+			"club_id": 1,
+			"status": "active",
+			"history": []
+		}
+	},
+	"clubs": {
+		"1": {
+			"id": 1,
+			"name": "FC Example",
+			"country": "Россия",
+			"league_id": 1,
+			"stadium": "Example Arena",
+			"budget": 500000,
+			"wage_budget": 50000,
+			"prestige": 50,
+			"roster": [1, 2]
+		},
+		"2": {
+			"id": 2,
+			"name": "FC Rival",
+			"country": "Россия",
+			"league_id": 1,
+			"stadium": "Rival Stadium",
+			"budget": 300000,
+			"wage_budget": 30000,
+			"prestige": 45,
+			"roster": []
+		}
+	},
+	"leagues": {
+		"1": {
+			"id": 1,
+			"name": "Примерная Лига",
+			"country": "Россия",
+			"level": 1,
+			"rules": {},
+			"teams": [1,2]
+		}
+	},
+	"staff": {}
+}

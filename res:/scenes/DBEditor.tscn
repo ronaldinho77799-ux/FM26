@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://scripts/Database.gd" type="Script" id=1]
+
+[node name="DBEditor" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBox" type="VBoxContainer" parent="."]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 20.0
+margin_bottom = 20.0
+separation = 8.0
+
+[node name="SearchBox" type="HBoxContainer" parent="VBox"]
+margin_bottom = 8.0
+
+[node name="NameEdit" type="LineEdit" parent="SearchBox"]
+placeholder_text = "Имя игрока"
+
+[node name="SearchButton" type="Button" parent="SearchBox"]
+text = "Поиск"
+connect("pressed", NodePath("."), "_on_Search_pressed")
+
+[node name="Results" type="ItemList" parent="VBox"]
+name = "Results"
+allow_reselect = true
+select_mode = 1
+min_size = Vector2(0, 200)
+
+[node name="EditArea" type="VBoxContainer" parent="VBox"]
+margin_top = 8.0
+
+[node name="LblEdit" type="Label" parent="EditArea"]
+text = "Выбран игрок: -"
+
+[node name="SaveButton" type="Button" parent="EditArea"]
+text = "Сохранить изменения"
+connect("pressed", NodePath("."), "_on_Save_pressed")
+
+[script]
+extends Control
+
+var current_player: Dictionary = {}
+
+func _on_Search_pressed() -> void:
+	var name := $VBox/SearchBox/NameEdit.text.strip_edges()
+	if name == "":
+		return
+	var results := Database.find_players({"name": name})
+	$VBox/Results.clear()
+	for p in results:
+		var display := "%s (id:%s) OVR:%s" % [p.get("name","?"), str(p.get("id","?")), str(p.get("ovr","?"))]
+		$VBox/Results.add_item(display)
+		$VBox/Results.set_item_metadata($VBox/Results.get_item_count() - 1, p)
+
+func _on_Save_pressed() -> void:
+	var idxs := $VBox/Results.get_selected_items()
+	if idxs.size() == 0:
+		return
+	var meta := $VBox/Results.get_item_metadata(idxs[0])
+	if typeof(meta) == TYPE_DICTIONARY:
+		var pid := int(meta.get("id"))
+		# demo: увеличим ovr на 1
+		var new_ovr := int(meta.get("ovr", 50)) + 1
+		Database.update_player(pid, {"ovr": new_ovr})
+		_on_Search_pressed()

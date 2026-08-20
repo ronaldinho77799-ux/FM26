@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://scripts/GameState.gd" type="Script" id=1]
+[ext_resource path="res://scripts/Database.gd" type="Script" id=2]
+
+[node name="Office" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="LeftPanel" type="Panel" parent="."]
+rect_min_size = Vector2(220, 0)
+margin_right = 220.0
+margin_bottom = 0.0
+
+[node name="MainPanel" type="Panel" parent="."]
+margin_left = 220.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+
+[node name="VBoxMain" type="VBoxContainer" parent="MainPanel"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 16.0
+margin_bottom = 16.0
+separation = 8.0
+
+[node name="DateLabel" type="Label" parent="VBoxMain"]
+name = "DateLabel"
+text = "Дата: -"
+
+[node name="NextMatchLabel" type="Label" parent="VBoxMain"]
+name = "NextMatchLabel"
+text = "Следующий матч: -"
+
+[script]
+extends Control
+
+func _ready() -> void:
+	_update_date_label()
+	GameState.connect("date_changed", Callable(self, "_on_date_changed"))
+	GameState.connect("career_started", Callable(self, "_on_career_started"))
+	_update_next_match()
+
+func _on_career_started() -> void:
+	_update_next_match()
+	_update_date_label()
+
+func _on_date_changed(new_date: Dictionary) -> void:
+	_update_date_label()
+
+func _update_date_label() -> void:
+	$VBoxMain/DateLabel.text = "Дата: %s.%s.%s" % [GameState.current_day, GameState.current_month, GameState.current_year]
+
+func _update_next_match() -> void:
+	var nm := GameState.get_next_match()
+	if nm == {}:
+		$VBoxMain/NextMatchLabel.text = "Следующий матч: нет"
+		return
+	var home := Database.clubs.get(str(nm.get("home")), {"name":"?"})
+	var away := Database.clubs.get(str(nm.get("away")), {"name":"?"})
+	var d := nm.get("date", {})
+	$VBoxMain/NextMatchLabel.text = "Следующий матч: %s - %s (%s.%s.%s)" % [home.get("name"), away.get("name"), d.get("day"), d.get("month"), d.get("year")]
