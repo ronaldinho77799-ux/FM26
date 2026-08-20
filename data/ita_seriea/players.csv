@@ -1,0 +1,6 @@
+id,name,name_ru,birth_year,nationality,positions,current_club_id,ovr,pot,fifa_rating,contract_end_year,value,wage
+4001,Victor Osimhen,Виктор Осимен,1998,Nigeria,ST,701,91,92,91,2026,120000000,300000
+4002,Lautaro Martínez,Лаутаро Мартинес,1997,Argentina,ST,702,88,89,88,2026,90000000,200000
+4003,Rafael Leão,Рафаэл Леао,1999,Portugal,LW,703,89,92,89,2027,110000000,260000
+4004,Federico Chiesa,Федерико Кьеза,1997,Italy,RW,704,84,86,84,2026,50000000,140000
+4005,Paulo Dybala,Пауло Дибала,1993,Argentina,AM,705,86,86,86,2025,45000000,180000

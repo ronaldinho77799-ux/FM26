@@ -1,0 +1,6 @@
+id,name,country,league_id,stadium,budget,wage_budget,prestige,roster,coach_id
+701,Napoli,Italy,ita_seriea,Stadio Diego Armando Maradona,180000000,70000000,93,"4001",901
+702,Inter,Italy,ita_seriea,San Siro,320000000,110000000,97,"4002",902
+703,AC Milan,Italy,ita_seriea,San Siro,280000000,100000000,96,"4003",903
+704,Juventus,Italy,ita_seriea,Allianz Stadium,260000000,90000000,94,"4004",904
+705,AS Roma,Italy,ita_seriea,Stadio Olimpico,220000000,80000000,92,"4005",905

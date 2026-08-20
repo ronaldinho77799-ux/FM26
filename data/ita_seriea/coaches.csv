@@ -1,0 +1,6 @@
+id,name,name_ru,nationality,role,attributes,current_club_id
+901,Luciano Spalletti,Лучано Спаллетти,Italy,Head Coach,"{\"tactics\":88,\"man_management\":86,\"training\":85}",701
+902,Simone Inzaghi,Симоне Индзаги,Italy,Head Coach,"{\"tactics\":89,\"man_management\":85,\"training\":86}",702
+903,Stefano Pioli,Стефано Пиоли,Italy,Head Coach,"{\"tactics\":87,\"man_management\":84,\"training\":85}",703
+904,Massimiliano Allegri,Массимилиано Аллегри,Italy,Head Coach,"{\"tactics\":90,\"man_management\":83,\"training\":84}",704
+905,José Mourinho,Жозе Моуринью,Portugal,Head Coach,"{\"tactics\":88,\"man_management\":86,\"training\":83}",705

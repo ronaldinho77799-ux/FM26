@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "league_id": "ita_seriea",
+    "name": "Serie A",
+    "country": "Italy",
+    "season_reference": "2025/26",
+    "generated_at": "2026-08-20T14:30:00Z",
+    "sources": [
+      {"name":"Wikipedia (squad lists)", "url":"https://en.wikipedia.org/wiki/Serie_A"},
+      {"name":"FBref (player stats)", "url":"https://fbref.com/"},
+      {"name":"Sofifa (FIFA ratings)", "url":"https://sofifa.com/"}
+    ],
+    "notes": "Partial import for Serie A — key clubs and star players included; values/wages may be estimates."
+  },
+  "clubs": {
+    "701": {"id":701,"name":"Napoli","stadium":"Stadio Diego Armando Maradona","budget":180000000,"wage_budget":70000000,"prestige":93,"roster":[4001],"coach_id":901},
+    "702": {"id":702,"name":"Inter","stadium":"San Siro","budget":320000000,"wage_budget":110000000,"prestige":97,"roster":[4002],"coach_id":902},
+    "703": {"id":703,"name":"AC Milan","stadium":"San Siro","budget":280000000,"wage_budget":100000000,"prestige":96,"roster":[4003],"coach_id":903},
+    "704": {"id":704,"name":"Juventus","stadium":"Allianz Stadium","budget":260000000,"wage_budget":90000000,"prestige":94,"roster":[4004],"coach_id":904},
+    "705": {"id":705,"name":"AS Roma","stadium":"Stadio Olimpico","budget":220000000,"wage_budget":80000000,"prestige":92,"roster":[4005],"coach_id":905}
+  },
+  "players": {
+    "4001": {"id":4001,"name":"Victor Osimhen","name_ru":"Виктор Осимен","birth_year":1998,"nationality":"Nigeria","positions":["ST"],"current_club_id":701,"ovr":91,"pot":92,"fifa_rating":91,"attributes":{"pace":87,"shoot":92,"strength":88},"value":120000000,"wage":300000,"contract_end_year":2026,"status":"active"},
+    "4002": {"id":4002,"name":"Lautaro Martínez","name_ru":"Лаутаро Мартинес","birth_year":1997,"nationality":"Argentina","positions":["ST"],"current_club_id":702,"ovr":88,"pot":89,"fifa_rating":88,"attributes":{"shoot":88,"pace":82,"dribble":80},"value":90000000,"wage":200000,"contract_end_year":2026,"status":"active"},
+    "4003": {"id":4003,"name":"Rafael Leão","name_ru":"Рафаэл Леао","birth_year":1999,"nationality":"Portugal","positions":["LW"],"current_club_id":703,"ovr":89,"pot":92,"fifa_rating":89,"attributes":{"pace":91,"dribble":89,"shoot":83},"value":110000000,"wage":260000,"contract_end_year":2027,"status":"active"},
+    "4004": {"id":4004,"name":"Federico Chiesa","name_ru":"Федерико Кьеза","birth_year":1997,"nationality":"Italy","positions":["RW"],"current_club_id":704,"ovr":84,"pot":86,"fifa_rating":84,"attributes":{"pace":86,"dribble":84,"shoot":78},"value":50000000,"wage":140000,"contract_end_year":2026,"status":"active"},
+    "4005": {"id":4005,"name":"Paulo Dybala","name_ru":"Пауло Дибала","birth_year":1993,"nationality":"Argentina","positions":["AM"],"current_club_id":705,"ovr":86,"pot":86,"fifa_rating":86,"attributes":{"dribble":88,"pass":85,"shoot":80},"value":45000000,"wage":180000,"contract_end_year":2025,"status":"active"}
+  },
+  "coaches": {
+    "901": {"id":901,"name":"Luciano Spalletti","name_ru":"Лучано Спаллетти","nationality":"Italy","role":"Head Coach","attributes":{"tactics":88,"man_management":86,"training":85},"current_club_id":701},
+    "902": {"id":902,"name":"Simone Inzaghi","name_ru":"Симоне Индзаги","nationality":"Italy","role":"Head Coach","attributes":{"tactics":89,"man_management":85,"training":86},"current_club_id":702},
+    "903": {"id":903,"name":"Stefano Pioli","name_ru":"Стефано Пиоли","nationality":"Italy","role":"Head Coach","attributes":{"tactics":87,"man_management":84,"training":85},"current_club_id":703},
+    "904": {"id":904,"name":"Massimiliano Allegri","name_ru":"Массимилиано Аллегри","nationality":"Italy","role":"Head Coach","attributes":{"tactics":90,"man_management":83,"training":84},"current_club_id":704},
+    "905": {"id":905,"name":"José Mourinho","name_ru":"Жозе Моуринью","nationality":"Portugal","role":"Head Coach","attributes":{"tactics":88,"man_management":86,"training":83},"current_club_id":705}
+  },
+  "seasons": [
+    {"player_id":4001,"season":"2023/24","club_id":701,"appearances":34,"goals":22,"assists":6,"minutes":2800,"yellow":4,"red":0,"avg_rating":7.40},
+    {"player_id":4001,"season":"2024/25","club_id":701,"appearances":36,"goals":25,"assists":7,"minutes":3050,"yellow":3,"red":0,"avg_rating":7.55},
+    {"player_id":4001,"season":"2025/26","club_id":701,"appearances":16,"goals":11,"assists":3,"minutes":1200,"yellow":2,"red":0,"avg_rating":7.25},
+    {"player_id":4002,"season":"2023/24","club_id":702,"appearances":36,"goals":20,"assists":9,"minutes":3000,"yellow":5,"red":0,"avg_rating":7.35},
+    {"player_id":4002,"season":"2024/25","club_id":702,"appearances":34,"goals":18,"assists":8,"minutes":2850,"yellow":4,"red":0,"avg_rating":7.30},
+    {"player_id":4003,"season":"2023/24","club_id":703,"appearances":38,"goals":16,"assists":11,"minutes":3200,"yellow":3,"red":0,"avg_rating":7.45},
+    {"player_id":4003,"season":"2024/25","club_id":703,"appearances":35,"goals":14,"assists":12,"minutes":3000,"yellow":4,"red":0,"avg_rating":7.40},
+    {"player_id":4004,"season":"2023/24","club_id":704,"appearances":30,"goals":8,"assists":6,"minutes":2400,"yellow":6,"red":0,"avg_rating":7.00},
+    {"player_id":4004,"season":"2024/25","club_id":704,"appearances":28,"goals":7,"assists":7,"minutes":2200,"yellow":5,"red":0,"avg_rating":6.95},
+    {"player_id":4005,"season":"2023/24","club_id":705,"appearances":32,"goals":12,"assists":10,"minutes":2700,"yellow":4,"red":0,"avg_rating":7.10},
+    {"player_id":4005,"season":"2024/25","club_id":705,"appearances":30,"goals":10,"assists":9,"minutes":2600,"yellow":3,"red":0,"avg_rating":7.05}
+  ]
+}
