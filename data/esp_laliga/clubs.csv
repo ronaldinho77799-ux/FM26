@@ -1,0 +1,4 @@
+id,name,country,league_id,stadium,budget,wage_budget,prestige,roster,coach_id
+601,Real Madrid,Spain,esp_laliga,Santiago Bernabéu,400000000,120000000,99,"3001",801
+602,FC Barcelona,Spain,esp_laliga,Camp Nou,350000000,110000000,98,"3002|3003",802
+603,Atlético Madrid,Spain,esp_laliga,Wanda Metropolitano,220000000,85000000,90,"3004",803

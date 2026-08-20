@@ -1,0 +1,4 @@
+id,name,name_ru,nationality,role,attributes,current_club_id
+801,Carlo Ancelotti,Карло Анчелотти,Italy,Head Coach,"{\"tactics\":91,\"man_management\":89,\"training\":88}",601
+802,Xavi Hernández,Хави,Spain,Head Coach,"{\"tactics\":89,\"man_management\":87,\"training\":86}",602
+803,Diego Simeone,Диего Симеоне,Argentina,Head Coach,"{\"tactics\":90,\"man_management\":91,\"training\":85}",603
