@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "version": "0.1",
+    "season_reference": "2025/26",
+    "currency": "EUR",
+    "generated_at": "2026-08-20T03:50:00Z",
+    "sources": []
+  },
+  "leagues": {
+    "eng_premier": { "id": "eng_premier", "name": "Premier League", "country": "England" },
+    "esp_laliga": { "id": "esp_laliga", "name": "LaLiga", "country": "Spain" },
+    "ita_seriea": { "id": "ita_seriea", "name": "Serie A", "country": "Italy" },
+    "ger_bundesliga": { "id": "ger_bundesliga", "name": "Bundesliga", "country": "Germany" },
+    "fra_ligue1": { "id": "fra_ligue1", "name": "Ligue 1", "country": "France" },
+    "por_primeira": { "id": "por_primeira", "name": "Primeira Liga", "country": "Portugal" },
+    "ned_eredivisie": { "id": "ned_eredivisie", "name": "Eredivisie", "country": "Netherlands" },
+    "rus_rpl": { "id": "rus_rpl", "name": "Russian Premier League", "country": "Russia" },
+    "tur_superlig": { "id": "tur_superlig", "name": "Süper Lig", "country": "Turkey" },
+    "bra_brasileirao": { "id": "bra_brasileirao", "name": "Brasileirão", "country": "Brazil" },
+    "arg_primera": { "id": "arg_primera", "name": "Primera División", "country": "Argentina" },
+    "usa_mls": { "id": "usa_mls", "name": "Major League Soccer", "country": "USA" }
+  },
+  "players": {
+    "2001": {
+      "id": 2001,
+      "name": "Mohamed Salah",
+      "name_ru": "Мохамед Салах",
+      "birth_year": 1992,
+      "nationality": "Egypt",
+      "positions": ["RW"],
+      "current_club_id": 501,
+      "ovr": 90,
+      "pot": 90,
+      "fifa_rating": 90,
+      "attributes": {"pace":92,"accel":91,"shoot":87,"pass":82,"dribble":90},
+      "value": 85000000,
+      "wage": 200000,
+      "contract_end_year": 2027,
+      "club_id": 501,
+      "status": "active",
+      "seasons": [
+        {"season":"2023/24","club_id":501,"appearances":34,"goals":22,"assists":8,"minutes":2900,"yellow":2,"red":0,"avg_rating":7.45,"awards":[{"name":"Premier League Golden Boot","season":"2023/24"}]},
+        {"season":"2024/25","club_id":501,"appearances":30,"goals":18,"assists":10,"minutes":2700,"yellow":3,"red":0,"avg_rating":7.30,"awards":[]},
+        {"season":"2025/26","club_id":501,"appearances":12,"goals":6,"assists":4,"minutes":900,"yellow":1,"red":0,"avg_rating":7.10,"awards":[]}
+      ],
+      "awards": [{"name":"Premier League Golden Boot","season":"2023/24"}]
+    }
+  },
+  "clubs": {
+    "501": {"id":501,"name":"Liverpool","country":"England","league_id":"eng_premier","stadium":"Anfield","budget":250000000,"wage_budget":90000000,"prestige":95,"roster":[2001],"coach_id":701}
+  },
+  "coaches": {
+    "701": {"id":701,"name":"Jürgen Klopp","name_ru":"Юрген Клопп","nationality":"Germany","role":"Head Coach","attributes":{"tactics":90,"man_management":92,"training":88},"current_club_id":501}
+  },
+  "national_teams": {
+    "EGY": {"id":"EGY","name":"Egypt","fifa_rank":31,"coach_id":801,"squad":[2001]}
+  },
+  "coaches_national": {
+    "801": {"id":801,"name":"Ehab Galal","name_ru":"Эхаб Галал","nationality":"Egypt","role":"National Coach","attributes":{"tactics":75}}
+  }
+}
