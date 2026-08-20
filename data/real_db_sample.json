@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "source": "sample",
+    "description": "Sample entries for real_db.json — example player (Eden Hazard), club, coach, and national team. Use as template for bulk import.",
+    "season_reference": "2025/26",
+    "generated_at": "2026-08-20"
+  },
+  "players": {
+    "1001": {
+      "id": 1001,
+      "name": "Eden Hazard",
+      "name_ru": "Эден Азар",
+      "birth_year": 1991,
+      "nationality": "Belgium",
+      "positions": ["LW", "AM"],
+      "current_club_id": 101,
+      "ovr": 83,
+      "pot": 84,
+      "fifa_rating": 84,
+      "attributes": {
+        "pace": 82,
+        "accel": 80,
+        "shoot": 81,
+        "pass": 78,
+        "dribble": 86,
+        "tech": 85,
+        "vision": 80,
+        "cross": 70,
+        "long_pass": 68,
+        "tackle": 38,
+        "interception": 36,
+        "strength": 72,
+        "stamina": 70,
+        "jump": 60,
+        "reaction": 82,
+        "gk_diving": 0,
+        "gk_handling": 0,
+        "gk_reflexes": 0
+      },
+      "value": 12000000,
+      "wage": 80000,
+      "contract_end_year": 2026,
+      "club_id": 101,
+      "status": "active",
+      "seasons": [
+        {
+          "season": "2024/25",
+          "club_id": 101,
+          "appearances": 28,
+          "goals": 10,
+          "assists": 9,
+          "minutes": 2100,
+          "yellow": 3,
+          "red": 0,
+          "avg_rating": 7.12,
+          "awards": ["Player of the Month Oct 2024"]
+        },
+        {
+          "season": "2025/26",
+          "club_id": 101,
+          "appearances": 12,
+          "goals": 4,
+          "assists": 3,
+          "minutes": 900,
+          "yellow": 1,
+          "red": 0,
+          "avg_rating": 6.95,
+          "awards": []
+        }
+      ],
+      "awards": ["Belgian Golden Shoe 2011"]
+    }
+  },
+  "clubs": {
+    "101": {
+      "id": 101,
+      "name": "Real Example FC",
+      "country": "England",
+      "league_id": 1,
+      "stadium": "Example Stadium",
+      "budget": 100000000,
+      "wage_budget": 10000000,
+      "prestige": 85,
+      "roster": [1001],
+      "coach_id": 5001,
+      "history": {
+        "2024/25": { "position": 3, "points": 78 },
+        "2025/26": { "position": 5, "points": 66 }
+      }
+    }
+  },
+  "coaches": {
+    "5001": {
+      "id": 5001,
+      "name": "Thomas Example",
+      "name_ru": "Томас Экзампл",
+      "nationality": "France",
+      "role": "Head Coach",
+      "attributes": { "tactics": 78, "man_management": 80, "training": 75 },
+      "current_club_id": 101,
+      "history": [ { "club_id": 101, "from": 2023, "to": 2026 } ]
+    }
+  },
+  "national_teams": {
+    "BEL": {
+      "id": "BEL",
+      "name": "Belgium",
+      "fifa_rank": 9,
+      "coach_id": 6001,
+      "squad": [1001]
+    }
+  },
+  "coaches_national": {
+    "6001": {
+      "id": 6001,
+      "name": "Roberto Example",
+      "name_ru": "Роберто Экзампл",
+      "nationality": "Italy",
+      "role": "National Coach",
+      "attributes": { "tactics": 80, "man_management": 82, "training": 77 }
+    }
+  }
+}
