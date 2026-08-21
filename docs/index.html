@@ -3,104 +3,56 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>FM26 — Web Prototype Preview</title>
-  <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;margin:20px;background:#0f1720;color:#e6eef8}
-    .card{background:#0b1220;padding:16px;border-radius:8px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,.6)}
-    input,button{padding:8px 10px;border-radius:6px;border:1px solid #213041;background:#071019;color:#e6eef8}
-    .muted{color:#9fb0c8}
-    pre{white-space:pre-wrap;word-break:break-word}
-    a{color:#7cc0ff}
-  </style>
+  <title>FM Manager — Web MVP</title>
+  <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-  <h1>FM26 — Web Prototype (Preview)</h1>
-  <p class="muted">Этот публичный файл позволяет просмотреть текущую базу (players / clubs / coaches / seasons) прямо в браузере. Если данные не отображаются — включите GitHub Pages для репозитория (см. инструкции ниже).</p>
+  <header>
+    <h1>FM Manager — Web MVP</h1>
+    <nav id="top-nav">
+      <button id="btnNew">Новая игра</button>
+      <button id="btnLoad">Загрузить</button>
+      <button id="btnEditor">Редактор БД</button>
+      <button id="btnLeague">Лига / Календарь</button>
+      <button id="btnSim">Симуляция матча</button>
+    </nav>
+  </header>
 
-  <div class="card">
-    <strong>Быстрый поиск игрока по имени или id</strong>
-    <div style="margin-top:8px">
-      <input id="q" placeholder="Введите имя или id, например 'Salah' или '2001'" style="width:60%" />
-      <button id="search">Поиск</button>
-      <button id="showAll">Показать статистику</button>
-    </div>
-    <div id="result" style="margin-top:12px"></div>
-  </div>
+  <main>
+    <section id="view-menu" class="view">
+      <p class="muted">Добро пожаловать — менеджер (MVP). Нажмите «Новая игра», чтобы создать карьеру или «Редактор БД», чтобы отредактировать игроков.</p>
+    </section>
 
-  <div class="card">
-    <strong>Статус базы</strong>
-    <div id="status" style="margin-top:8px" class="muted">Загрузка...</div>
-  </div>
+    <section id="view-editor" class="view" style="display:none">
+      <h2>Редактор Базы</h2>
+      <div id="editor-controls">
+        <button id="btnAddPlayer">Добавить игрока</button>
+        <button id="btnSaveDb">Сохранить базу</button>
+      </div>
+      <div id="playersList"></div>
+    </section>
 
-  <div class="card muted">
-    <strong>Инструкции по публикации (если страница пустая)</strong>
-    <ol>
-      <li>Откройте настройки репозитория → Pages (или Settings → Pages).</li>
-      <li>Выберите Branch: <code>main</code> и Folder: <code>/docs</code>. Сохраните.</li>
-      <li>Через минуту страница станет доступна по адресу: <a id="pagesUrl" href="#">https://ronaldinho77799-ux.github.io/FM26/</a></li>
-    </ol>
-    <p>После включения GitHub Pages обновите эту страницу (Ctrl+R). Если возникнут проблемы — напишите, проверю.</p>
-  </div>
+    <section id="view-league" class="view" style="display:none">
+      <h2>Таблица лиги</h2>
+      <div id="leagueTable"></div>
+    </section>
 
-  <script>
-    const statusEl = document.getElementById('status');
-    const resultEl = document.getElementById('result');
-    let DB = null;
+    <section id="view-sim" class="view" style="display:none">
+      <h2>Симуляция матча</h2>
+      <div>
+        <select id="selectHome"></select>
+        <select id="selectAway"></select>
+        <button id="btnRunMatch">Запустить матч</button>
+      </div>
+      <div id="matchLog"></div>
+    </section>
 
-    async function loadData(){
-      statusEl.textContent = 'Загружаем data/real_db.json...';
-      try{
-        // Заменено на raw.githubusercontent URL, чтобы работать корректно при публикации через GitHub Pages
-        const r = await fetch('https://raw.githubusercontent.com/ronaldinho77799-ux/FM26/main/data/real_db.json');
-        if(!r.ok) throw new Error('HTTP ' + r.status);
-        DB = await r.json();
-        const playersCount = DB.players ? Object.keys(DB.players).length : 0;
-        const clubsCount = DB.clubs ? Object.keys(DB.clubs).length : 0;
-        statusEl.innerHTML = `База загружена — игроки: <strong>${playersCount}</strong>, клубы: <strong>${clubsCount}</strong> (<span class="muted">данные обновляются по лигам</span>)`;
-      }catch(e){
-        statusEl.innerHTML = 'Не удалось загрузить data/real_db.json — <span class="muted">проверьте, включён ли GitHub Pages или запустите локальный сервер</span><br><pre>' + e.message + '</pre>';
-        console.error(e);
-      }
-    }
+  </main>
 
-    function renderPlayer(p){
-      if(!p) return '<div class="muted">Игрок не найден</div>';
-      return `<div><strong>${p.name} (${p.name_ru || ''})</strong> — ${p.nationality}, born ${p.birth_year}<br>
-        Позиции: ${p.positions ? p.positions.join(', ') : '-'}<br>
-        OVR: ${p.ovr || '-'} | POT: ${p.pot || '-'} | Value: €${p.value || '-'} | Wage: €${p.wage || '-'}<br>
-        Клуб id: ${p.current_club_id || '-'} | Контракт до: ${p.contract_end_year || '-'}
-      </div>`;
-    }
+  <footer>
+    <div class="muted">Сохранение: localStorage. Эта страница — MVP для быстрой демонстрации.</div>
+  </footer>
 
-    document.getElementById('search').addEventListener('click', ()=>{
-      const q = document.getElementById('q').value.trim().toLowerCase();
-      if(!DB){ resultEl.innerHTML = '<div class="muted">База ещё не загружена.</div>'; return; }
-      if(!q){ resultEl.innerHTML = '<div class="muted">Введите имя или id.</div>'; return; }
-      // search by id or name
-      let found = null;
-      if(/^[0-9]+$/.test(q)){
-        found = DB.players && DB.players[q];
-      } else {
-        const arr = Object.values(DB.players || {});
-        found = arr.find(x => (x.name && x.name.toLowerCase().includes(q)) || (x.name_ru && x.name_ru.toLowerCase().includes(q)) );
-      }
-      resultEl.innerHTML = renderPlayer(found);
-    });
-
-    document.getElementById('showAll').addEventListener('click', ()=>{
-      if(!DB){ resultEl.innerHTML = '<div class="muted">База ещё не загружена.</div>'; return; }
-      const players = Object.values(DB.players || {});
-      if(players.length === 0){ resultEl.innerHTML = '<div class="muted">Игроки не найдены в базе.</div>'; return; }
-      const list = players.slice(0,200).map(p=>`<li>${p.id} — ${p.name} (${p.current_club_id || '-'}) OVR:${p.ovr || '-'}</li>`).join('');
-      resultEl.innerHTML = `<div>Показаны первые ${Math.min(200, players.length)} игроков:<ul style="max-height:240px;overflow:auto">${list}</ul></div>`;
-    });
-
-    // show probable pages url
-    const pagesUrlEl = document.getElementById('pagesUrl');
-    pagesUrlEl.href = 'https://ronaldinho77799-ux.github.io/FM26/';
-    pagesUrlEl.textContent = pagesUrlEl.href;
-
-    loadData();
-  </script>
+  <script src="/assets/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,12 @@
+{
+  "players": {
+    "1": { "id": 1, "name": "Ivan Petrov", "ovr": 66, "positions": ["CM"], "current_club_id": 101 },
+    "2": { "id": 2, "name": "Alex Smith", "ovr": 72, "positions": ["ST"], "current_club_id": 102 },
+    "3": { "id": 3, "name": "Luis Garcia", "ovr": 75, "positions": ["LW"], "current_club_id": 101 },
+    "4": { "id": 4, "name": "Marco Rossi", "ovr": 63, "positions": ["CB"], "current_club_id": 102 }
+  },
+  "clubs": {
+    "101": { "id": 101, "name": "FC Red" },
+    "102": { "id": 102, "name": "FC Blue" }
+  }
+}

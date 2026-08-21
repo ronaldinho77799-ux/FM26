@@ -1,0 +1,20 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: system-ui, -apple-system, Roboto, 'Segoe UI', Arial;
+  margin:0; background:#0f1720; color:#e6eef8; line-height:1.4;
+}
+header{padding:18px; background:#071018; border-bottom:1px solid #111827}
+h1{margin:0 0 8px 0; font-size:20px}
+#top-nav button{margin-right:8px;padding:8px 10px;border-radius:6px;border:1px solid #213041;background:#071019;color:#e6eef8;cursor:pointer}
+main{padding:18px}
+.card{background:#0b1220;padding:12px;border-radius:8px;margin-bottom:12px}
+.muted{color:#9fb0c8}
+#playersList .player{padding:8px;border-bottom:1px solid #17202a;display:flex;gap:8px;align-items:center}
+#playersList input[type="text"], #playersList input[type="number"]{padding:6px;border-radius:6px;border:1px solid #213041;background:#071019;color:#e6eef8}
+#leagueTable table{width:100%;border-collapse:collapse}
+#leagueTable th, #leagueTable td{padding:8px;border-bottom:1px solid #17202a;text-align:left}
+select, button{background:#071019;color:#e6eef8;border:1px solid #213041;padding:6px;border-radius:6px}
+#matchLog{margin-top:12px;padding:8px;background:#071018;border-radius:6px}
+footer{padding:12px;border-top:1px solid #111827; background:#071018}
