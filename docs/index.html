@@ -3,56 +3,91 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>FM Manager — Web MVP</title>
-  <link rel="stylesheet" href="/assets/style.css">
+  <title>FM: Manager — Prototype (M1)</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <header>
-    <h1>FM Manager — Web MVP</h1>
-    <nav id="top-nav">
-      <button id="btnNew">Новая игра</button>
-      <button id="btnLoad">Загрузить</button>
-      <button id="btnEditor">Редактор БД</button>
-      <button id="btnLeague">Лига / Календарь</button>
-      <button id="btnSim">Симуляция матча</button>
-    </nav>
-  </header>
+  <div id="app" class="app">
+    <aside class="sidebar">
+      <div class="brand">FM Manager</div>
+      <nav class="mainnav">
+        <button data-view="menu" class="navbtn">Главное</button>
+        <button data-view="newgame" class="navbtn">Новая игра</button>
+        <button data-view="load" class="navbtn">Загрузить</button>
+        <button data-view="settings" class="navbtn">Настройки</button>
+        <button id="exitBtn" class="navbtn">Выход</button>
+      </nav>
+      <div class="autosave">Автосохранение: <span id="autosaveState">вкл</span></div>
+    </aside>
 
-  <main>
-    <section id="view-menu" class="view">
-      <p class="muted">Добро пожаловать — менеджер (MVP). Нажмите «Новая игра», чтобы создать карьеру или «Редактор БД», чтобы отредактировать игроков.</p>
-    </section>
+    <main class="main">
+      <header class="header">
+        <div class="hdr-left">
+          <div id="currentDate">Дата: —</div>
+          <div id="currentSeason">Сезон: —</div>
+        </div>
+        <div class="hdr-right">
+          <button id="saveBtn" class="btn">Сохранить</button>
+          <button id="manualSaveBtn" class="btn">Сохранить сейчас</button>
+        </div>
+      </header>
 
-    <section id="view-editor" class="view" style="display:none">
-      <h2>Редактор Базы</h2>
-      <div id="editor-controls">
-        <button id="btnAddPlayer">Добавить игрока</button>
-        <button id="btnSaveDb">Сохранить базу</button>
-      </div>
-      <div id="playersList"></div>
-    </section>
+      <section id="view-menu" class="view active">
+        <h1>Футбольный менеджер</h1>
+        <p class="muted">Добро пожаловать. Здесь вы сможете начать новую карьеру, загрузить сохранение и настроить параметры.</p>
+        <div class="card actions">
+          <button id="startNewBtn" class="btn primary">Новая игра</button>
+          <button id="openLoadBtn" class="btn">Загрузить</button>
+          <button id="openSettingsBtn" class="btn">Настройки</button>
+        </div>
+      </section>
 
-    <section id="view-league" class="view" style="display:none">
-      <h2>Таблица лиги</h2>
-      <div id="leagueTable"></div>
-    </section>
+      <section id="view-newgame" class="view">
+        <h2>Новая игра</h2>
+        <div class="card">
+          <label>Выберите лигу</label>
+          <select id="selectLeague"></select>
+          <label>Выберите клуб</label>
+          <select id="selectClub"></select>
+          <label>Имя менеджера</label>
+          <input id="managerName" type="text" placeholder="Введите имя менеджера" />
+          <label>Сложность</label>
+          <select id="selectDifficulty"><option value="easy">Лёгкая</option><option value="normal" selected>Нормальная</option><option value="hard">Сложная</option></select>
 
-    <section id="view-sim" class="view" style="display:none">
-      <h2>Симуляция матча</h2>
-      <div>
-        <select id="selectHome"></select>
-        <select id="selectAway"></select>
-        <button id="btnRunMatch">Запустить матч</button>
-      </div>
-      <div id="matchLog"></div>
-    </section>
+          <div class="row" style="margin-top:12px">
+            <button id="createCareerBtn" class="btn primary">Создать карьеру</button>
+            <button id="cancelNewBtn" class="btn">Отмена</button>
+          </div>
+        </div>
+      </section>
 
-  </main>
+      <section id="view-load" class="view">
+        <h2>Загрузить игру</h2>
+        <div class="card" id="savesList">Загрузки отсутствуют</div>
+      </section>
 
-  <footer>
-    <div class="muted">Сохранение: localStorage. Эта страница — MVP для быстрой демонстрации.</div>
-  </footer>
+      <section id="view-settings" class="view">
+        <h2>Настройки</h2>
+        <div class="card">
+          <label><input type="checkbox" id="optAutosave" checked/> Включить автосохранение (каждый ход)</label>
+          <div style="margin-top:8px">
+            <button id="exportBtn" class="btn">Экспорт .json</button>
+            <input id="importFile" type="file" accept="application/json" />
+          </div>
+        </div>
+      </section>
 
-  <script src="/assets/app.js"></script>
+      <section id="view-office" class="view">
+        <h2>Офис менеджера</h2>
+        <div class="card">
+          <div id="officeSummary">Карьера не запущена</div>
+        </div>
+      </section>
+
+      <footer class="footer muted">Prototype M1 • Dark UI • Local JSON saves</footer>
+    </main>
+  </div>
+
+  <script type="module" src="/js/bootstrap.js"></script>
 </body>
 </html>

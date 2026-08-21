@@ -1,12 +1,15 @@
 {
   "players": {
-    "1": { "id": 1, "name": "Ivan Petrov", "ovr": 66, "positions": ["CM"], "current_club_id": 101 },
-    "2": { "id": 2, "name": "Alex Smith", "ovr": 72, "positions": ["ST"], "current_club_id": 102 },
-    "3": { "id": 3, "name": "Luis Garcia", "ovr": 75, "positions": ["LW"], "current_club_id": 101 },
-    "4": { "id": 4, "name": "Marco Rossi", "ovr": 63, "positions": ["CB"], "current_club_id": 102 }
+    "1": { "id": 1, "name": "Ivan Petrov", "age": 24, "nationality": "Russia", "positions": ["CM"], "ovr": 66, "pot": 72, "club": 101 },
+    "2": { "id": 2, "name": "Alex Smith", "age": 26, "nationality": "England", "positions": ["ST"], "ovr": 72, "pot": 78, "club": 102 },
+    "3": { "id": 3, "name": "Luis Garcia", "age": 21, "nationality": "Spain", "positions": ["LW"], "ovr": 75, "pot": 84, "club": 101 },
+    "4": { "id": 4, "name": "Marco Rossi", "age": 28, "nationality": "Italy", "positions": ["CB"], "ovr": 63, "pot": 65, "club": 102 }
   },
   "clubs": {
-    "101": { "id": 101, "name": "FC Red" },
-    "102": { "id": 102, "name": "FC Blue" }
+    "101": { "id": 101, "name": "FC Red", "country": "Russia", "league": 201, "stadium": "Red Arena", "budget": 1000000, "wage_budget": 50000, "prestige": 40 },
+    "102": { "id": 102, "name": "FC Blue", "country": "England", "league": 201, "stadium": "Blue Park", "budget": 800000, "wage_budget": 45000, "prestige": 38 }
+  },
+  "leagues": {
+    "201": { "id": 201, "name": "Demo Premier", "country": "Demo", "division": 1, "teams": 10 }
   }
 }
