@@ -50,7 +50,8 @@
     async function loadData(){
       statusEl.textContent = 'Загружаем data/real_db.json...';
       try{
-        const r = await fetch('data/real_db.json');
+        // Заменено на raw.githubusercontent URL, чтобы работать корректно при публикации через GitHub Pages
+        const r = await fetch('https://raw.githubusercontent.com/ronaldinho77799-ux/FM26/main/data/real_db.json');
         if(!r.ok) throw new Error('HTTP ' + r.status);
         DB = await r.json();
         const playersCount = DB.players ? Object.keys(DB.players).length : 0;
@@ -81,7 +82,7 @@
         found = DB.players && DB.players[q];
       } else {
         const arr = Object.values(DB.players || {});
-        found = arr.find(x => x.name && x.name.toLowerCase().includes(q) || (x.name_ru && x.name_ru.toLowerCase().includes(q)) );
+        found = arr.find(x => (x.name && x.name.toLowerCase().includes(q)) || (x.name_ru && x.name_ru.toLowerCase().includes(q)) );
       }
       resultEl.innerHTML = renderPlayer(found);
     });
