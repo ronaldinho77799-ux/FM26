@@ -1,0 +1,6 @@
+id,name,name_ru,nationality,role,attributes,current_club_id
+1001,Thomas Tuchel,Томас Тухель,Germany,Head Coach,"{\"tactics\":91,\"man_management\":88,\"training\":89}",801
+1002,Edin Terzić,Эдин Тёрзич,Germany,Head Coach,"{\"tactics\":86,\"man_management\":84,\"training\":83}",802
+1003,Marco Rose,Марко Розе,Germany,Head Coach,"{\"tactics\":85,\"man_management\":83,\"training\":84}",803
+1004,Xabi Alonso,Чаби Алонсо,Spain,Head Coach,"{\"tactics\":87,\"man_management\":85,\"training\":86}",804
+1005,Oliver Glasner,Оливер Гласнер,Austria,Head Coach,"{\"tactics\":84,\"man_management\":82,\"training\":83}",805

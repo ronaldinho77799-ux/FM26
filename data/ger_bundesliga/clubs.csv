@@ -1,0 +1,6 @@
+id,name,country,league_id,stadium,budget,wage_budget,prestige,roster,coach_id
+801,FC Bayern Munich,Germany,ger_bundesliga,Allianz Arena,350000000,130000000,99,"5001|5002|5003",1001
+802,Borussia Dortmund,Germany,ger_bundesliga,Signal Iduna Park,240000000,95000000,96,"5005",1002
+803,RB Leipzig,Germany,ger_bundesliga,Red Bull Arena,200000000,85000000,92,"",1003
+804,Bayer Leverkusen,Germany,ger_bundesliga,BayArena,180000000,80000000,91,"5004",1004
+805,Eintracht Frankfurt,Germany,ger_bundesliga,Deutsche Bank Park,140000000,60000000,88,"",1005

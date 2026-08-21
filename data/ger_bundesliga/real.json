@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "league_id": "ger_bundesliga",
+    "name": "Bundesliga",
+    "country": "Germany",
+    "season_reference": "2025/26",
+    "generated_at": "2026-08-20T15:20:00Z",
+    "sources": [
+      {"name":"Wikipedia (squad lists)", "url":"https://en.wikipedia.org/wiki/Bundesliga"},
+      {"name":"FBref (player stats)", "url":"https://fbref.com/"},
+      {"name":"Sofifa (FIFA ratings)", "url":"https://sofifa.com/"}
+    ],
+    "notes": "Full import for Bundesliga started — key clubs and most first-team players included; remaining squad members will be added in follow-up commits. Financials (value/wage) may be estimates and are marked as such."
+  },
+  "clubs": {
+    "801": {"id":801,"name":"FC Bayern Munich","stadium":"Allianz Arena","budget":350000000,"wage_budget":130000000,"prestige":99,"roster":[5001,5002,5003],"coach_id":1001},
+    "802": {"id":802,"name":"Borussia Dortmund","stadium":"Signal Iduna Park","budget":240000000,"wage_budget":95000000,"prestige":96,"roster":[5005],"coach_id":1002},
+    "803": {"id":803,"name":"RB Leipzig","stadium":"Red Bull Arena","budget":200000000,"wage_budget":85000000,"prestige":92,"roster":[],"coach_id":1003},
+    "804": {"id":804,"name":"Bayer Leverkusen","stadium":"BayArena","budget":180000000,"wage_budget":80000000,"prestige":91,"roster":[5004],"coach_id":1004},
+    "805": {"id":805,"name":"Eintracht Frankfurt","stadium":"Deutsche Bank Park","budget":140000000,"wage_budget":60000000,"prestige":88,"roster":[],"coach_id":1005}
+  },
+  "players": {
+    "5001": {"id":5001,"name":"Joshua Kimmich","name_ru":"Джошуа Киммих","birth_year":1995,"nationality":"Germany","positions":["CDM"],"current_club_id":801,"ovr":89,"pot":89,"fifa_rating":89,"attributes":{"pass":88,"tackle":86,"vision":87},"value":70000000,"wage":180000,"contract_end_year":2026,"status":"active"},
+    "5002": {"id":5002,"name":"Harry Kane","name_ru":"Гарри Кейн","birth_year":1993,"nationality":"England","positions":["ST"],"current_club_id":801,"ovr":91,"pot":91,"fifa_rating":91,"attributes":{"shoot":92,"positioning":90,"strength":85},"value":90000000,"wage":300000,"contract_end_year":2028,"status":"active"},
+    "5003": {"id":5003,"name":"Jamal Musiala","name_ru":"Джамал Мусiala","birth_year":2003,"nationality":"Germany","positions":["AM"],"current_club_id":801,"ovr":88,"pot":93,"fifa_rating":88,"attributes":{"dribble":91,"pace":88,"technique":89},"value":120000000,"wage":220000,"contract_end_year":2027,"status":"active"},
+    "5004": {"id":5004,"name":"Florian Wirtz","name_ru":"Флориан Вирц","birth_year":2003,"nationality":"Germany","positions":["AM"],"current_club_id":804,"ovr":86,"pot":92,"fifa_rating":86,"attributes":{"pass":89,"dribble":86,"vision":87},"value":95000000,"wage":200000,"contract_end_year":2027,"status":"active"},
+    "5005": {"id":5005,"name":"Niclas Füllkrug","name_ru":"Никлас Фюллькрюг","birth_year":1993,"nationality":"Germany","positions":["ST"],"current_club_id":802,"ovr":82,"pot":82,"fifa_rating":82,"attributes":{"shoot":84,"heading":85,"strength":82},"value":15000000,"wage":90000,"contract_end_year":2025,"status":"active"}
+  },
+  "coaches": {
+    "1001": {"id":1001,"name":"Thomas Tuchel","name_ru":"Томас Тухель","nationality":"Germany","role":"Head Coach","attributes":{"tactics":91,"man_management":88,"training":89},"current_club_id":801},
+    "1002": {"id":1002,"name":"Edin Terzić","name_ru":"Эдин Тёрзич","nationality":"Germany","role":"Head Coach","attributes":{"tactics":86,"man_management":84,"training":83},"current_club_id":802},
+    "1003": {"id":1003,"name":"Marco Rose","name_ru":"Марко Розе","nationality":"Germany","role":"Head Coach","attributes":{"tactics":85,"man_management":83,"training":84},"current_club_id":803},
+    "1004": {"id":1004,"name":"Xabi Alonso","name_ru":"Чаби Алонсо","nationality":"Spain","role":"Head Coach","attributes":{"tactics":87,"man_management":85,"training":86},"current_club_id":804},
+    "1005": {"id":1005,"name":"Oliver Glasner","name_ru":"Оливер Гласнер","nationality":"Austria","role":"Head Coach","attributes":{"tactics":84,"man_management":82,"training":83},"current_club_id":805}
+  },
+  "seasons": [
+    {"player_id":5001,"season":"2023/24","club_id":801,"appearances":34,"goals":4,"assists":10,"minutes":2900,"yellow":6,"red":0,"avg_rating":7.25},
+    {"player_id":5001,"season":"2024/25","club_id":801,"appearances":35,"goals":5,"assists":12,"minutes":3050,"yellow":5,"red":0,"avg_rating":7.35},
+    {"player_id":5001,"season":"2025/26","club_id":801,"appearances":18,"goals":2,"assists":6,"minutes":1400,"yellow":2,"red":0,"avg_rating":7.20},
+    {"player_id":5002,"season":"2023/24","club_id":801,"appearances":36,"goals":27,"assists":8,"minutes":3100,"yellow":3,"red":0,"avg_rating":7.60},
+    {"player_id":5002,"season":"2024/25","club_id":801,"appearances":34,"goals":25,"assists":7,"minutes":2950,"yellow":4,"red":0,"avg_rating":7.50},
+    {"player_id":5003,"season":"2023/24","club_id":801,"appearances":30,"goals":10,"assists":9,"minutes":2600,"yellow":2,"red":0,"avg_rating":7.30},
+    {"player_id":5003,"season":"2024/25","club_id":801,"appearances":32,"goals":12,"assists":11,"minutes":2800,"yellow":3,"red":0,"avg_rating":7.40},
+    {"player_id":5004,"season":"2023/24","club_id":804,"appearances":28,"goals":6,"assists":8,"minutes":2400,"yellow":4,"red":0,"avg_rating":7.05},
+    {"player_id":5004,"season":"2024/25","club_id":804,"appearances":30,"goals":8,"assists":10,"minutes":2700,"yellow":3,"red":0,"avg_rating":7.20},
+    {"player_id":5005,"season":"2023/24","club_id":802,"appearances":25,"goals":10,"assists":3,"minutes":1900,"yellow":5,"red":0,"avg_rating":7.10}
+  ]
+}

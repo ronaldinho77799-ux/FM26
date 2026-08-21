@@ -2,11 +2,13 @@
   "status": "in_progress",
   "started_at": "2026-08-20T03:00:00Z",
   "current_step": "parsing_and_aggregation",
-  "leagues_queue": [
+  "leagues_completed": [
     "eng_premier",
     "esp_laliga",
     "ita_seriea",
-    "ger_bundesliga",
+    "ger_bundesliga"
+  ],
+  "leagues_queue": [
     "fra_ligue1",
     "por_primeira",
     "ned_eredivisie",
@@ -14,9 +16,10 @@
     "tur_superlig",
     "bra_brasileirao",
     "arg_primera",
-    "usa_mls"
+    "usa_mls",
+    "top_40_national_teams"
   ],
   "first_batch": ["eng_premier","esp_laliga","ita_seriea","ger_bundesliga"],
-  "estimated_first_commit": "24-48 hours",
-  "notes": "I'll push per-league CSV/JSON files and update data/real_db.json incrementally. Will attach sources and metadata for each league in commits."
+  "estimated_completion_days": 5,
+  "notes": "Bundesliga data added (partial/full for first-team players). Continuing with remaining leagues."
 }

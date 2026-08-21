@@ -1,0 +1,6 @@
+id,name,name_ru,birth_year,nationality,positions,current_club_id,ovr,pot,fifa_rating,contract_end_year,value,wage
+5001,Joshua Kimmich,Джошуа Киммих,1995,Germany,CDM,801,89,89,89,2026,70000000,180000
+5002,Harry Kane,Гарри Кейн,1993,England,ST,801,91,91,91,2028,90000000,300000
+5003,Jamal Musiala,Джамал Мусiala,2003,Germany,AM,801,88,93,88,2027,120000000,220000
+5004,Florian Wirtz,Флориан Вирц,2003,Germany,AM,804,86,92,86,2027,95000000,200000
+5005,Niclas Füllkrug,Никлас Фюллькрюг,1993,Germany,ST,802,82,82,82,2025,15000000,90000
